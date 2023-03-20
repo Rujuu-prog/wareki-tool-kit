@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  wareki-ts:
+    container_name: wareki-ts
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/src/
+    tty: true
