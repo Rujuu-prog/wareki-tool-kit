@@ -1,6 +1,6 @@
 import { eraList } from './eraList'
 
-function toGregorian (dateString: string): string | null {
+export function toGregorian (dateString: string): string | null {
   const eraNames = eraList.map((e) => e.name).join('|')
   const regex = new RegExp(`^(${eraNames})(\\d+)年(\\d+)月(\\d+)日$`)
   const matches = dateString.match(regex)
@@ -23,5 +23,3 @@ function toGregorian (dateString: string): string | null {
 
   return `${gregorianYear}年${month}月${day}日`
 }
-
-export { toGregorian }
