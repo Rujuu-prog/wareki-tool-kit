@@ -1,12 +1,12 @@
 import { eraList } from './eraList'
 
-export function toGregorian (dateString: string): string | null {
+export function toGregorian (dateString: string, separate: string = 'k'): string {
   const eraNames = eraList.map((e) => e.name).join('|')
   const regex = new RegExp(`^(${eraNames})(\\d+)年(\\d+)月(\\d+)日$`)
   const matches = dateString.match(regex)
 
   if (matches == null) {
-    return null
+    throw new Error('Invalid date')
   }
 
   const eraName = matches[1]
@@ -16,10 +16,15 @@ export function toGregorian (dateString: string): string | null {
 
   const era = eraList.find((e) => e.name === eraName)
   if (era === undefined) {
-    return null
+    throw new Error('The entered year is not supported.')
   }
 
   const gregorianYear = era.startYear + yearInEra - 1
 
-  return `${gregorianYear}年${month}月${day}日`
+  // 区切り文字切り替え
+  if (separate === 'k') {
+    return `${gregorianYear}年${month}月${day}日`
+  } else {
+    return `${gregorianYear}${separate}${month}${separate}${day}`
+  }
 }

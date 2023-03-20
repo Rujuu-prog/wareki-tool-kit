@@ -1,2 +1,1 @@
-declare function toGregorian(dateString: string): string | null;
-export { toGregorian };
+export declare function toGregorian(dateString: string, separate?: string): string;
