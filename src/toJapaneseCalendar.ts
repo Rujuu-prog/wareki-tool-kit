@@ -32,7 +32,7 @@ export function toJapaneseCalendar (dateString: string, isFirstYearToNumber: boo
     throw new Error('The entered year is not supported.')
   }
   const eraYear = year - era.startYear + 1
-  if (eraYear === 1 && isFirstYearToNumber) {
+  if (eraYear === 1 && !isFirstYearToNumber) {
     return `${era.name}元年${month}月${day}日`
   } else {
     return `${era.name}${eraYear}年${month}月${day}日`
