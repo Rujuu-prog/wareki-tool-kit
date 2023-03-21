@@ -2,6 +2,10 @@
 
 A collection of tools to manipulate the Japanese and Western calendars for javascript and typescript.
 
+## Link
+
+日本語のREADME.md👉[JP-README.md](https://github.com/Rujuu-prog/wareki-tool-kit/blob/main/JP-README.md)
+
 ## Installation
 
 ```bash
