@@ -18,7 +18,8 @@ toJapaneseCalendar('2019-05-01', true);
 @see {@link https://github.com/Rujuu-prog/wareki-tool-kit} for the canonical source repository
 */
 export function toJapaneseCalendar (dateString: string, isFirstYearToNumber: boolean = false): string {
-  const date = new Date(dateString)
+  const date = parseDateString(dateString)
+  // const date = new Date(dateString)
   if (isNaN(date.getTime())) {
     throw new Error('Invalid date')
   }
@@ -36,4 +37,26 @@ export function toJapaneseCalendar (dateString: string, isFirstYearToNumber: boo
   } else {
     return `${era.name}${eraYear}年${month}月${day}日`
   }
+}
+
+function parseDateString (dateString: string): Date {
+  // Try ISO 8601 format (e.g., '2023-03-21', '2023/03/21')
+  let date = new Date(dateString)
+  if (!isNaN(date.getTime())) {
+    return date
+  }
+
+  // Try 'YYYY年MM月DD日' format
+  const match = dateString.match(/^(\d{4})年(\d{1,2})月(\d{1,2})日$/)
+  if (match != null) {
+    const year = parseInt(match[1], 10)
+    const month = parseInt(match[2], 10) - 1 // Note: month is 0-indexed in JavaScript Date objects
+    const day = parseInt(match[3], 10)
+    date = new Date(year, month, day)
+    if (!isNaN(date.getTime())) {
+      return date
+    }
+  }
+
+  throw new Error('Invalid date')
 }
