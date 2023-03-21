@@ -2,6 +2,10 @@
 
 javascriptとtypescriptのための、和暦と西暦を操作するツールキットです。
 
+## リンク
+
+開発者向け👉[DEVELOP.md](https://github.com/Rujuu-prog/wareki-tool-kit/blob/main/DEVELOP.md)
+
 ## インストール方法
 
 ```bash

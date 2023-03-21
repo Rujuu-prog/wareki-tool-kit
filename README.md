@@ -4,7 +4,9 @@ A collection of tools to manipulate the Japanese and Western calendars for javas
 
 ## Link
 
-日本語のREADME.md👉[JP-README.md](https://github.com/Rujuu-prog/wareki-tool-kit/blob/main/JP-README.md)
+日本語の説明書👉[JP-README.md](https://github.com/Rujuu-prog/wareki-tool-kit/blob/main/JP-README.md)
+
+For development👉[DEVELOP.md](https://github.com/Rujuu-prog/wareki-tool-kit/blob/main/DEVELOP.md)
 
 ## Installation
 
