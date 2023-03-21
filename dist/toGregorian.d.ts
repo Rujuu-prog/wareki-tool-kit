@@ -1,1 +1,1 @@
-export declare function toGregorian(dateString: string, separate?: string): string;
+export declare function toGregorian(dateString: string, separate?: string, isPadZero?: boolean): string;
