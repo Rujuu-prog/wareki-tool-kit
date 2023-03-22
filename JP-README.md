@@ -37,6 +37,8 @@ toJapaneseCalendar('2019-03-03', false, false) // 令和元年3月3日
 
 // ⏬toGregorian
 toGregorian('令和2年5月10日') // 2020年5月10日
+toGregorian('令和1年5月10日') // 2019年5月10日
+toGregorian('令和元年5月10日') // 2019年5月10日
 // オプション1(区切り文字選択。デフォルトは'k'。)
 toGregorian('令和2年5月10日', '/')// 2020/5/10
 toGregorian('令和2年5月10日', '-')// 2020-5-10
