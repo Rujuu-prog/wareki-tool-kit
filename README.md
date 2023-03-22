@@ -1,5 +1,7 @@
 # wareki-tool-kit
 
+[![npm version](https://badge.fury.io/js/wareki-tool-kit.svg)](https://badge.fury.io/js/wareki-tool-kit) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A collection of tools to manipulate the Japanese and Western calendars for javascript and typescript.
 
 ## Link

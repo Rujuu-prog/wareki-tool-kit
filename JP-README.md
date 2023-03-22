@@ -1,5 +1,7 @@
 # wareki-tool-kit
 
+[![npm version](https://badge.fury.io/js/wareki-tool-kit.svg)](https://badge.fury.io/js/wareki-tool-kit) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 javascriptとtypescriptのための、和暦と西暦を操作するツールキットです。
 
 ## リンク
