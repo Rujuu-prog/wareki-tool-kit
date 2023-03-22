@@ -23,9 +23,12 @@ import { eraList } from './eraList'
  * @see {@link https://github.com/Rujuu-prog/wareki-tool-kit} for the canonical source repository
  */
 export function toGregorian (dateString: string, separate: string = 'k', isPadZero: boolean = false): string {
+  // Replace "元" with "1" if present in the dateString
+  const dateStringReplaced = dateString.replace(/元/, '1')
+
   const eraNames = eraList.map((e) => e.name).join('|')
   const regex = new RegExp(`^(${eraNames})(\\d+)年(\\d+)月(\\d+)日$`)
-  const matches = dateString.match(regex)
+  const matches = dateStringReplaced.match(regex)
 
   if (matches == null) {
     throw new Error('Invalid date')

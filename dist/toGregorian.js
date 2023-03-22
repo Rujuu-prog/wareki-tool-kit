@@ -27,9 +27,11 @@ var eraList_1 = require("./eraList");
 function toGregorian(dateString, separate, isPadZero) {
     if (separate === void 0) { separate = 'k'; }
     if (isPadZero === void 0) { isPadZero = false; }
+    // Replace "元" with "1" if present in the dateString
+    var dateStringReplaced = dateString.replace(/元/, '1');
     var eraNames = eraList_1.eraList.map(function (e) { return e.name; }).join('|');
     var regex = new RegExp("^(".concat(eraNames, ")(\\d+)\u5E74(\\d+)\u6708(\\d+)\u65E5$"));
-    var matches = dateString.match(regex);
+    var matches = dateStringReplaced.match(regex);
     if (matches == null) {
         throw new Error('Invalid date');
     }
