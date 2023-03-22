@@ -9,6 +9,19 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "japanese",
+    "wareki",
+    "era",
+    "date",
+    "convert",
+    "toolkit",
+    "gregorian"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rujuu-prog/wareki-tool-kit"
+  },
   "scripts": {
     "lint": "eslint --fix 'src/**/*.ts'",
     "build": "yarn run tsc"
