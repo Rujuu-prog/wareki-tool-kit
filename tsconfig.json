@@ -9,7 +9,9 @@
       "declaration": true,
       "sourceMap": true
     },
-    "include": [
-      "src"
+  "types": ["jest", "node"],
+  "include": [
+      "src",
+      "__tests__"
     ]
   }
