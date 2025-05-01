@@ -7,9 +7,9 @@ import { eraList } from './eraList'
  * @param separate - The separator to use for the Gregorian date string. Defaults to 'k', which will use the format "YYYY年MM月DD日". Use any other character for a custom separator (e.g. '-' for "YYYY-MM-DD").
  * @param isPadZero - Whether to pad the month and day with a leading zero if they are less than 10. Defaults to false.
  * @returns - The Gregorian date string in the format specified by the `separate` parameter.
- * @throws {Error} If the input `dateString` is malformed or does not match the expected format.
- * @throws {Error} If the specified era name is not supported (not included in `eraList`).
- * @throws {Error} If the extracted date components (year, month, day) do not form a valid Gregorian date.
+ * @throws {Error} If the input `dateString` does not match the expected format (e.g., '令和5年3月21日').
+ * @throws {Error} If the extracted era name is not listed in `eraList`.
+ * @throws {Error} If the converted Gregorian date is invalid (e.g., 2月30日など存在しない日).
  * @example
  * // returns '2023年3月21日'
  * toGregorian('令和5年3月21日')
@@ -54,6 +54,7 @@ export function toGregorian (
   const day = parseInt(matches[4], 10)
 
   const era = eraList.find((e) => e.name === eraName)
+  // この時点で eraName は必ず eraList に含まれているが、念のためのチェック（今後削除するかも）
   if (era === undefined) {
     throw new Error('The entered year is not supported.')
   }
