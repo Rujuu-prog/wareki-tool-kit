@@ -43,5 +43,5 @@ export const eraList: Era[] = [
   { name: '慶安', startYear: 1648 },
   { name: '正保', startYear: 1644 },
   { name: '寛永', startYear: 1624 },
-  { name: '元和', startYear: 1615 },
+  { name: '元和', startYear: 1615 }
 ]
