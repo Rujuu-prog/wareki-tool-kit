@@ -1,5 +1,15 @@
 .history/
 node_modules/
 
+yarn-error.log
+
+dist/
+
+.env
+
 wareki-tool-kit-1.0.0.tgz
 .DS_Store
+
+.idea/
+
+coverage/
