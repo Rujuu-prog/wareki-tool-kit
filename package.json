@@ -1,6 +1,6 @@
 {
   "name": "wareki-tool-kit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Convert from Western to Japanese calendar",
   "author": "Rujuu",
   "license": "MIT",
@@ -31,9 +31,9 @@
     "test:api": "yarn tsx __tests__/testWarekiToolKit.ts"
   },
   "dependencies": {
-    "typescript": "5.4.3"
   },
   "devDependencies": {
+    "typescript": "5.7.3",
     "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "eslint": "^8.0.1",
