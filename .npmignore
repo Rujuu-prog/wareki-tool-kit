@@ -1,0 +1,18 @@
+# ローカル開発用ファイル
+node_modules/
+yarn-error.log
+.history/
+sample/
+.env
+.env.example
+wareki-tool-kit-*.tgz
+
+# テストや開発設定
+__tests__/
+jest.config.js
+
+# ドキュメント・開発補助
+DEVELOPMENT.md
+DEVELOPMENT-JP.md
+Dockerfile
+docker-compose.yml
