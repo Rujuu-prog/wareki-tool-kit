@@ -1,4 +1,4 @@
-FROM node:19-alpine
+FROM node:25.7.0-alpine
 WORKDIR /home/src/
 
 # RUN apk update 
